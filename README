@@ -1,4 +1,11 @@
 Dependency:
 -commons-codec-1.6.jar
 
-Note: Not every operation in the Mechanical Turk API is implemented.
+Note that only the following basic operations are implemented at the moment:
+APPROVE_ASSIGNMENT
+CREATE_HIT
+EXTEND_HIT_
+GET_ASSIGNMENTS
+GRANT_BONUS
+REJECT_ASSIGNMENTS
+SET_HITTYPE_NOTIFICATION
