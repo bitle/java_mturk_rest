@@ -1,4 +1,4 @@
-package com.cclo;
+package com.cclo7;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -85,8 +85,6 @@ public class AmazonMTurkClient {
 		if(response != null && response.length() > 0){
 			String responseXML = this.decodeXML(response.toString());
 			
-			System.out.println("approveAssignment: responseXML=" + responseXML);
-
 			try{
 				DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 				DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -151,7 +149,6 @@ public class AmazonMTurkClient {
 
 		if(response != null && response.length() > 0){
 			String responseXML = this.decodeXML(response.toString());
-			System.out.println("createHIT: responseXML=" + responseXML);
 	
 			try{
 				DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -225,8 +222,6 @@ public class AmazonMTurkClient {
 		if(response != null && response.length() > 0){
 			String responseXML = this.decodeXML(response.toString());
 			
-			System.out.println("extendHIT: responseXML=" + responseXML);
-
 			try{
 				DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 				DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -267,7 +262,6 @@ public class AmazonMTurkClient {
 		//parse XML response for worker's submitted answer
 		if(response != null && response.length() > 0){
 			String responseXML = this.decodeXML(response.toString());
-			System.out.println("getAssignmentsForHIT: responseXML=" + responseXML);
 			
 			//DOM ran into problems when using it to parse this nested xml
 			//so we use substring here
@@ -344,7 +338,6 @@ public class AmazonMTurkClient {
 		String response = this.makeMTurkRequest(GRANT_BONUS_OPERATION, parameters);
 		if(response != null && response.length() > 0){
 			String responseXML = this.decodeXML(response.toString());
-			System.out.println("grantBonus: responseXML=" + responseXML);
 
 			try{
 				DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -386,7 +379,6 @@ public class AmazonMTurkClient {
 		String response = this.makeMTurkRequest(REJECT_ASSIGNMENT_OPERATION, parameters);
 		if(response != null && response.length() > 0){
 			String responseXML = this.decodeXML(response.toString());
-			System.out.println("rejectAssignment: responseXML=" + responseXML);
 
 			try{
 				DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -442,7 +434,6 @@ public class AmazonMTurkClient {
 		String response = this.makeMTurkRequest(SET_HITTYPE_NOTIFICATION_OPERATION, parameters);
 		if(response != null && response.length() > 0){
 			String responseXML = this.decodeXML(response.toString());
-			System.out.println("setHITTypeNotification: responseXML=" + responseXML);
 
 			try{
 				DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
