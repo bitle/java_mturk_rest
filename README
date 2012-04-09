@@ -1,0 +1,4 @@
+Dependency:
+-commons-codec-1.6.jar
+
+Note: Not every operation in the Mechanical Turk API is implemented.
